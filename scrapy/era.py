@@ -6,7 +6,7 @@ class EraSpider(scrapy.Spider):
         'https://www.era.pt/imoveis/comprar/apartamentos/porto',
         'https://www.era.pt/imoveis/comprar/moradias/porto',
     ]
-    donwload_delay = 2
+    download_delay = 5.0
 
 
     def parse(self, response):
@@ -81,14 +81,18 @@ class EraSpider(scrapy.Spider):
             'casas_banho': casas_banho,
             'estacionamento': estacionamento,
             'area_terreno': area_terreno,
+            'area_util': area_util,
             'certificado_energetico': certificado_energetico,
-            'tipo_de_imovel': tipo_de_imovel,
+            'descricao': descricao,
+            'tipo_de_imovel': tipo_de_imovel, 
             'estado': estado,
             'preco_venda': preco_venda,
             'area_bruta': area_bruta,
             'distrito': distrito,
             'concelho': concelho,
+            'freguesia': freguesia,
             'zona': zona,
+            'referencia' : referencia,
             'divisoes': divisoes,
             'caracteristicas': caracteristicas,
             'zonas_verdes': zonas_verdes,
